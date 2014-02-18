@@ -23,13 +23,16 @@ def make_chains(input_text, n_gram_size):
     # create an empty dictionary
     d = {}
 
-    # loop through the range of the length of the split text minus the number of grams
-    # ??? we do this because ????
+    # loop through the range of the length of the split text minus the number of gram size
+    # as prompted by the user
+    # ???? we do this because this will 
+    # range of the length of words minus size of n-grams
+    # ex: 5 words - 2 (n_gram_size) = 0, 1, 2
     for i in range(len(words) - n_gram_size):
-        # we are taking the text that has split into words
-        # and pulling the item we are one and and the next n 
-        # (number of grams as specified in the main function) amount of items
-        # assign it to a variable
+        # we are taking the text that has been split into words
+        # and pulling the item we are on and up to the numbers of items in n_gram_size
+        # (the number of grams as specified in the main function) and
+        # assigning it to a variable
         n_gram = words[i:i + n_gram_size]
         # since n_gram is currently a list, we need to turn it into a tuple       
         key = tuple(n_gram)
